@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoftSell - Sell Your Software Licenses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e88e5;
+      --accent: #43a047;
+      --bg-light: #f5f7fa;
+      --dark: #222;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.2em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 1.5em;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 0.7em 1.5em;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 4em 2em;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1e88e5, #42a5f5);
+      color: white;
+      text-align: center;
+      padding: 6em 2em;
+    }
+
+    .hero h2 {
+      font-size: 2.8em;
+      margin-bottom: 0.4em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+
+    .cards, .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: center;
+    }
+
+    .card, .tile, .testimonial {
+      background: white;
+      padding: 1.5em;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1 1 280px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover, .tile:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5em;
+      color: white;
+    }
+
+    .testimonial {
+      font-style: italic;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 0.5em;
+      font-weight: 600;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, select, textarea {
+      padding: 0.8em;
+      border-radius: var(--radius);
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em 1em;
+      background: #e3f2fd;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .cards, .tiles {
+        flex-direction: column;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+      }
+
+      .hero h2 {
+        font-size: 2em;
+      }
+    }
+
+    /* Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SoftSell</h1>
+    <a href="#contact" class="btn">Get a Quote</a>
+  </header>
+
+  <section class="hero fade-in">
+    <h2>Turn Unused Licenses Into Cash</h2>
+    <p>Sell your old software licenses easily and securely, with instant payments and zero hassle.</p>
+    <a href="#contact" class="btn">Sell My Licenses</a>
+  </section>
+
+  <section class="fade-in delay-1">
+    <h2>How It Works</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Upload License</h3>
+        <p>Submit your unused license info securely via our encrypted form.</p>
+      </div>
+      <div class="card">
+        <h3>2. Get Valuation</h3>
+        <p>Receive an instant and fair valuation from our system.</p>
+      </div>
+      <div class="card">
+        <h3>3. Get Paid</h3>
+        <p>Accept the offer and receive your payment via your preferred method.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in delay-2">
+    <h2>Why Choose Us</h2>
+    <div class="tiles">
+      <div class="tile">🚀 Fast Payouts within 24 hours</div>
+      <div class="tile">🔒 100% Secure Process</div>
+      <div class="tile">🌍 Trusted by 1000+ users globally</div>
+      <div class="tile">💬 24/7 Customer Support</div>
+    </div>
+  </section>
+
+  <section class="fade-in delay-3">
+    <h2>What Our Clients Say</h2>
+    <div class="tiles">
+      <div class="testimonial">
+        “The process was quick, easy, and I got paid instantly!”
+        <span>- Jane Doe, CTO at TechCorp</span>
+      </div>
+      <div class="testimonial">
+        “SoftSell helped me monetize old licenses sitting idle. Amazing service!”
+        <span>- John Smith, Freelancer</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+      <select name="license" required>
+        <option value="">Select License Type</option>
+        <option value="windows">Windows</option>
+        <option value="office">MS Office</option>
+        <option value="adobe">Adobe Creative Suite</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 SoftSell. All rights reserved.
+  </footer>
+
+</body>
+</html>
